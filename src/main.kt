@@ -1,7 +1,7 @@
 fun main (){
 multi(arrayOf(15,20,4))
     stateement(arrayOf("Laptop",20.5,15,17.2F,5,5.5,true))
-    createArray(arrayOf('a','e','i','o','u'))
+    createArray(arrayOf('a','e','r','i','o','u','b','z','x'))
 }
 fun multi(num: Array<Int>): Int {
     var product = 1
@@ -24,8 +24,15 @@ fun stateement(line: Array<Any>): Double {
     return sum
 }
 fun createArray(vowels: Array<Char>): Int{
-    var number = vowels.count()
+    var number = 0
+        vowels.forEach { g ->
+            if (g=='a'||g=='e'||g=='i'||g=='o'||g=='u'){
+                number += g.toString().count()
+
+        }
+        }
     println(number)
     return number
+
     }
 
